@@ -335,4 +335,7 @@
         <item>925</item> <!--item>sensorLocationY</item-->
         <item>115</item> <!--item>sensorRadius</item-->
     </array>
+
+     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
 </resources>
