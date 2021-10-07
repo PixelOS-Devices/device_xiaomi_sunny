@@ -136,7 +136,8 @@ PRODUCT_PACKAGES += \
     libdng_sdk.vendor \
     libcamera2ndk_vendor \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
+    android.hardware.camera.provider@2.4-service_64 \
+    android.frameworks.sensorservice@1.0.vendor
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
