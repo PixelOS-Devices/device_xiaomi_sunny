@@ -17,7 +17,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_mojito
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mojito
 
 # Kernel
-TARGET_KERNEL_CONFIG := mojito_defconfig
+TARGET_KERNEL_CONFIG := neternels_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mojito
 
 # Properties
