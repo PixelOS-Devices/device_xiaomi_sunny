@@ -439,7 +439,7 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge
 
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.multihal
+    android.hardware.sensors@2.1-service.xiaomi_mojito-multihal
 
 # Sensors configs
 PRODUCT_COPY_FILES += \
