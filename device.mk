@@ -360,7 +360,9 @@ PRODUCT_COPY_FILES += \
 
 # Netd
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
+    android.system.net.netd@1.1.vendor \
+    libloc_net_iface \
+    libloc_net_iface.vendor
 
 # Neural Networks
 PRODUCT_PACKAGES += \
