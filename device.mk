@@ -15,8 +15,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # A/B
 # Inherit virtual_ab_ota product
-$(call inherit-product, \
-    $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 TARGET_IS_VAB := true
 
