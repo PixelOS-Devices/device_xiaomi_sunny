@@ -1,4 +1,4 @@
-# Unpinned blobs from mojito-user 12 RKQ1.210614.002 V13.0.5.0.SKGMIXM release-keys
+# Unpinned blobs from mojito-user 12 RKQ1.210614.002 V13.0.7.0.SKGMIXM release-keys
 
 # ACDB
 vendor/etc/acdbdata/IDP/india/INDIA_Bluetooth_cal.acdb
@@ -423,6 +423,7 @@ vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/sensors/config/adux1050_0.json
 vendor/etc/sensors/config/bmi160_0.json
 vendor/etc/sensors/config/lsm6ds3c_0.json
+vendor/etc/sensors/config/sdmmagpie_qrd_lsm6dso_0.json
 vendor/etc/sensors/config/sm7150_ak0991_0.json
 vendor/etc/sensors/config/sm7150_bmi220_0.json
 vendor/etc/sensors/config/sm7150_bu27030_0.json
@@ -444,6 +445,7 @@ vendor/etc/sensors/config/sns_cm.json
 vendor/etc/sensors/config/sns_dae.json
 vendor/etc/sensors/config/sns_device_orient.json
 vendor/etc/sensors/config/sns_diag_filter.json
+vendor/etc/sensors/config/sns_direct_channel.json
 vendor/etc/sensors/config/sns_distance_bound.json
 vendor/etc/sensors/config/sns_dpc.json
 vendor/etc/sensors/config/sns_facing.json
