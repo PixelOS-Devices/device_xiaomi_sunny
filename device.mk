@@ -30,8 +30,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    FrameworksMojito \
+    SystemUIMojito
 
 # Sensor
 TARGET_ENABLE_MULTI_SENSOR := true

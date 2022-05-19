@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "FrameworksMojito",
+    theme: "FrameworksMojito",
+    sdk_version: "current",
+    vendor: true,
+}
