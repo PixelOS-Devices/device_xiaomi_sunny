@@ -45,4 +45,10 @@
     <dimen name="physical_volume_down_button_center_screen_location_y">1150px</dimen>
     <dimen name="physical_volume_up_button_center_screen_location_y">950px</dimen>
 
+    <!-- gap on either side of status bar notification icons -->
+    <dimen name="status_bar_icon_padding">-1dp</dimen>
+
+    <!-- End padding for left-aligned status bar clock -->
+    <dimen name="status_bar_left_clock_end_padding">3dp</dimen>
+
 </resources>

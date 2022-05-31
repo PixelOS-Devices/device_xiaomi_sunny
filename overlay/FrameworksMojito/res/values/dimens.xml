@@ -23,13 +23,9 @@
     <dimen name="status_bar_height">106px</dimen>
 
     <!-- Radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">119px</dimen>
+    <dimen name="rounded_corner_radius">103.500015px</dimen>
 
     <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
     <dimen name="rounded_corner_radius_adjustment">22px</dimen>
-
-    <!-- Radius of the software rounded corners at the bottom of the display in its natural
-    orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_bottom">40dp</dimen>
     
 </resources>
