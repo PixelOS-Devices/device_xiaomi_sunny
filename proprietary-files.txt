@@ -426,9 +426,9 @@ vendor/lib64/camera/components/etc/visidon_clearshot_params.xml
 -vendor/lib64/camera/components/libmmcamera_cac3.so
 
 # Camera-Megvii
-vendor/etc/camera/megviifacepp_0_5_2_model
-vendor/lib64/libMegviiFacepp-0.5.2.so
-vendor/lib64/libmegface.so
+vendor/etc/camera/megviifacepp_0_5_2_model:vendor/etc/camera/facedetectpp_0_5_2_model
+-vendor/lib64/libmegface.so:vendor/lib64/libfacedet.so
+-vendor/lib64/libMegviiFacepp-0.5.2.so:vendor/lib64/libFaceDetectpp-0.5.2.so
 
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
