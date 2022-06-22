@@ -231,7 +231,6 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/libFaceGrade.so
 -vendor/lib64/libHalSuperSensorServer.so
 -vendor/lib64/libI420colorconvert.so
--vendor/lib64/libMegviiFacepp-0.5.2.so
 -vendor/lib64/libSNPE.so
 -vendor/lib64/libSuperSensor.so
 -vendor/lib64/libSuperSensorCPU.so
@@ -265,7 +264,6 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/libft2vendor.so
 -vendor/lib64/libhta_hexagon_runtime.so
 -vendor/lib64/libhvx_interface.so
--vendor/lib64/libmegface.so
 -vendor/lib64/libmiStereoFactoryRemapLib.so
 -vendor/lib64/libmiai_portraitsupernight.so
 -vendor/lib64/libmiai_supernight.so
@@ -352,7 +350,6 @@ vendor/etc/camera/golden_rear_dc_cal_wu.bin
 vendor/etc/camera/hdr_ui9_params.config
 vendor/etc/camera/male_bg.png
 vendor/etc/camera/male_icon.png
-vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/mibokeh_712_opencl.bin
 vendor/etc/camera/mibokeh_712_parameter.bin
 vendor/etc/camera/model_back.dlc
@@ -434,6 +431,11 @@ vendor/lib64/camera/components/etc/visidon_clearshot_params.xml
 -vendor/lib64/camera/components/com.xiaomi.node.misegment.so
 -vendor/lib64/camera/components/libdepthmapwrapper.so
 -vendor/lib64/camera/components/libmmcamera_cac3.so
+
+# Camera face detection
+vendor/etc/camera/megviifacepp_0_5_2_model:vendor/etc/camera/facedetectpp_0_5_2_model
+-vendor/lib64/libmegface.so:vendor/lib64/libfacedet.so
+-vendor/lib64/libMegviiFacepp-0.5.2.so:vendor/lib64/libFaceDetectpp-0.5.2.so
 
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
