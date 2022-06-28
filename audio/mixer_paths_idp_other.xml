@@ -351,9 +351,9 @@
     <ctl name="RX_CDC_DMA_RX_0 Port Mixer TX_CDC_DMA_TX_3" value="0" />
 
     <!-- Volume controls -->
-    <ctl name="RX_RX0 Digital Volume" value="84" />
-    <ctl name="RX_RX1 Digital Volume" value="84" />
-    <ctl name="RX_RX2 Digital Volume" value="84" />
+    <ctl name="RX_RX0 Digital Volume" value="89" />
+    <ctl name="RX_RX1 Digital Volume" value="89" />
+    <ctl name="RX_RX2 Digital Volume" value="89" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
 
