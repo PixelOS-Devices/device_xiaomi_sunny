@@ -197,7 +197,6 @@ persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.report_codec=1
 persist.vendor.radio.enable_temp_dds=true
-persist.vendor.qti.telephony.vt_cam_interface=2
 
 # Soc
 ro.soc.manufacturer=Qualcomm
