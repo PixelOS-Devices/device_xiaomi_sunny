@@ -5,5 +5,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_mojito.mk
+    $(LOCAL_DIR)/aosp_mojito.mk
 	
