@@ -104,6 +104,7 @@ void vendor_load_properties() {
     std::string fingerprint;
     std::string description;
     std::string mod_device;
+    std::string marketname;
 
     if (sku == "mojito") {
         model = "M2101K7AG";
@@ -111,12 +112,14 @@ void vendor_load_properties() {
         fingerprint = "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys";
         description = "mojito-user 12 RKQ1.210614.002 V13.0.10.0.SKGMIXM release-keys";
         mod_device = "mojito_global";
+        marketname = "Redmi Note 10";
     } else {
         model = "M2101K7AG";
         device = "sunny";
         fingerprint = "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys";
         description = "sunny_global-user 12 RKQ1.210614.002 V13.0.10.0.SKGMIXM release-keys";
         mod_device = "sunny_global";
+        marketname = "Redmi Note 10";
     }
 
     set_ro_build_prop("fingerprint", fingerprint);
@@ -124,5 +127,7 @@ void vendor_load_properties() {
     set_ro_product_prop("model", model);
     property_override("ro.build.description", description.c_str());
     property_override("ro.product.mod_device", mod_device.c_str());
+    property_override("bluetooth.device.default_name", marketname.c_str());
+    property_override("vendor.usb.product_string", marketname.c_str());
     load_dalvik_properties();
 }
