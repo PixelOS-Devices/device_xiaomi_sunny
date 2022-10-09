@@ -1,3 +1,0 @@
-binder_call(daxservice_app, hal_dms_default)
-
-allow daxservice_app hal_dms_hwservice:hwservice_manager find;

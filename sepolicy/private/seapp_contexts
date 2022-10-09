@@ -1,5 +1,2 @@
-user=_app isPrivApp=true seinfo=platform name=com.dolby.daxappui domain=daxservice_app type=app_data_file levelFrom=user
-user=_app isPrivApp=true seinfo=platform name=com.dolby.daxservice domain=daxservice_app type=app_data_file levelFrom=user
-
 user=system seinfo=platform name=org.lineageos.devicesettings domain=devicesettings_app type=system_app_data_file
 user=system seinfo=platform name=org.lineageos.settings domain=devicesettings_app type=system_app_data_file
