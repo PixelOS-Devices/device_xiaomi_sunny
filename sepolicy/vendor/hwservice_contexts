@@ -1,4 +1,2 @@
-vendor.dolby.hardware.dms::IDms                                               u:object_r:hal_dms_hwservice:s0
 vendor.xiaomi.hardware.campostproc::IMiPostProcService                        u:object_r:hal_camerapostproc_xiaomi_hwservice:s0
 vendor.xiaomi.hardware.fingerprintextension::IXiaomiFingerprint               u:object_r:hal_fingerprint_hwservice_xiaomi:s0
-vendor.xiaomi.hardware.motor::IMotor                                          u:object_r:hal_motor_hwservice:s0

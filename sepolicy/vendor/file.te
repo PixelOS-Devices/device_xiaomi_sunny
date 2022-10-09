@@ -20,5 +20,4 @@ type proc_last_kmsg, fs_type, proc_type;
 
 type avb_file, file_type;
 
-# Data files
 type per_boot_file, file_type, data_file_type, core_data_file_type;
