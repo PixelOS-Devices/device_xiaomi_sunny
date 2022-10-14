@@ -162,13 +162,6 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_POWERHAL_BOOST_EXT := $(DEVICE_PATH)/power/boost-ext.cpp
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
-# Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab_AB.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
