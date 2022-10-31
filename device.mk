@@ -370,6 +370,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
+    ApertureMojito \
     CarrierConfigMojito \
     KProfilesMojito \
     FrameworksMojito \
