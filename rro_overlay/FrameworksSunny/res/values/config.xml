@@ -663,6 +663,16 @@
         <item>org.lineageos.aperture.dev</item>
     </string-array>
 
+    <!-- The list of package IDs that are not allowed to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageBlackList" translatable="false">
+        <item>org.telegram.messenger</item>
+        <item>org.thunderdog.challegram</item>
+        <item>tw.nekomimi.nekogram</item>
+        <item>it.owlgram.android</item>
+        <item>org.telegram.messenger.web</item>
+        <item>com.exteragram.messenger</item>
+    </string-array>
+
     <!-- Boost Framework -->
     <bool name="config_supportsBoostFramework">true</bool>
 
