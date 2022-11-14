@@ -13,18 +13,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_library_shared {
-    name: "libpiex_shim",
-
-    shared_libs: [
-        "libpiex",
-        "libutils",
-    ],
-
-    proprietary: true,
-    srcs: ["libpiex_shim.cpp"],
-}
-
 prebuilt_etc {
     name: "camxoverridesettings.txt",
     src: "camxoverridesettings.txt",
