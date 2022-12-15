@@ -68,8 +68,11 @@
     <!-- Starting padding for a left-aligned status bar clock -->
     <dimen name="status_bar_left_clock_starting_padding">10dp</dimen>
 
+    <!-- the padding on the start of the statusbar -->
+    <dimen name="status_bar_padding_start">16dp</dimen>
+
     <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">10dp</dimen>
+    <dimen name="status_bar_padding_end">5dp</dimen>
 
     <!-- Horizontal offset divisor of statusbar for burn-in protection -->
     <integer name="status_bar_offset_divisor">4</integer>
