@@ -379,6 +379,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigMojito \
     KProfilesMojito \
     FrameworksMojito \
+    OpenDeltaMojito \
     SettingsProviderMojito \
     SettingsMojito \
     SystemUIMojito \
