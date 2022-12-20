@@ -117,6 +117,8 @@ void vendor_load_properties() {
         property_override("ro.product.mod_device", "sunny_global");
     }
 
+    property_override("vendor.usb.product_string", "Redmi Note 10");
+
     load_dalvik_properties();
 #ifdef __ANDROID_RECOVERY__
     std::string buildtype = GetProperty("ro.build.type", "userdebug");
