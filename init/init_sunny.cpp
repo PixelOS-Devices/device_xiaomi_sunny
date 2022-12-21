@@ -27,6 +27,7 @@
 
 #include <vector>
 
+#include <android-base/logging.h>
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -92,12 +93,14 @@ void vendor_load_properties(void) {
     if (region.find("INDIA") != std::string::npos)
         model = "M2101K7AI";
 
-    set_ro_build_prop("fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.11.0.SKGMIXM:user/release-keys");
-    set_ro_product_prop("device", "sunny");
-    set_ro_product_prop("model", model);
-    property_override("ro.build.description", "sunny_global-user 12 RKQ1.210614.002 V13.0.11.0.SKGMIXM release-keys");
-    property_override("ro.product.mod_device", "sunny_global");
-    property_override("bluetooth.device.default_name", "Redmi Note 10");
-    property_override("vendor.usb.product_string", "Redmi Note 10");
+    if (access("/system/bin/recovery", F_OK) != 0) {
+        set_ro_build_prop("fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.11.0.SKGMIXM:user/release-keys");
+        set_ro_product_prop("device", "sunny");
+        set_ro_product_prop("model", model);
+        property_override("ro.build.description", "sunny_global-user 12 RKQ1.210614.002 V13.0.11.0.SKGMIXM release-keys");
+        property_override("ro.product.mod_device", "sunny_global");
+        property_override("bluetooth.device.default_name", "Redmi Note 10");
+        property_override("vendor.usb.product_string", "Redmi Note 10");
+    }
     load_dalvik_properties();
 }
