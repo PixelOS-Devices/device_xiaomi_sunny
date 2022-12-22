@@ -16,7 +16,6 @@ android_app {
 
     static_libs: [
         "org.lineageos.settings.resources",
-        "org.pixelexperience.settings.resources_custom",
     ],
 
     optimize: {
