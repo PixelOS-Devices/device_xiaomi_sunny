@@ -14,61 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.mojito"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.1-service.mojito"
 
 #include <log/log.h>
-#include <poll.h>
-#include <thread>
 
 #include "BiometricsFingerprint.h"
-
-#define COMMAND_NIT 10
-#define PARAM_NIT_FOD 1
-#define PARAM_NIT_NONE 0
-
-#define FOD_STATUS_ON 1
-#define FOD_STATUS_OFF -1
-
-#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
-#define Touch_Fod_Enable 10
-#define TOUCH_MAGIC 0x5400
-#define TOUCH_IOC_SETMODE TOUCH_MAGIC + 0
-
-#define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui"
-
-#ifdef ENABLE_UDFPS
-namespace {
-static bool readBool(int fd) {
-    char c;
-    int rc;
-
-    rc = lseek(fd, 0, SEEK_SET);
-    if (rc) {
-        ALOGE("failed to seek fd, err: %d", rc);
-        return false;
-    }
-
-    rc = read(fd, &c, sizeof(char));
-    if (rc != 1) {
-        ALOGE("failed to read bool from fd, err: %d", rc);
-        return false;
-    }
-
-    return c != '0';
-}
-}  // anonymous namespace
-#endif
 
 namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_3 {
+namespace V2_1 {
 namespace implementation {
 
 // Supported fingerprint HAL version
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
+
+using RequestStatus = android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
 
 BiometricsFingerprint* BiometricsFingerprint::sInstance = nullptr;
 
@@ -78,40 +41,6 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     if (!mDevice) {
         ALOGE("Can't open HAL module");
     }
-
-#ifdef ENABLE_UDFPS
-    touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
-
-    std::thread([this]() {
-        int fd = open(FOD_UI_PATH, O_RDONLY);
-        if (fd < 0) {
-            ALOGE("failed to open fd, err: %d", fd);
-            return;
-        }
-
-        struct pollfd fodUiPoll = {
-                .fd = fd,
-                .events = POLLERR | POLLPRI,
-                .revents = 0,
-        };
-
-        while (true) {
-            int rc = poll(&fodUiPoll, 1, -1);
-            if (rc < 0) {
-                ALOGE("failed to poll fd, err: %d", rc);
-                continue;
-            }
-
-            bool fingerDown = readBool(fd);
-            ALOGI("fod_ui status: %d", fingerDown);
-            mDevice->extCmd(mDevice, COMMAND_NIT, fingerDown ? PARAM_NIT_FOD : PARAM_NIT_NONE);
-            if (!fingerDown) {
-                int arg[2] = {Touch_Fod_Enable, FOD_STATUS_OFF};
-                ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
-            }
-        }
-    }).detach();
-#endif
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -324,14 +253,19 @@ fingerprint_device_t* getDeviceForVendor(const char* class_name) {
 }
 
 fingerprint_device_t* getFingerprintDevice() {
-    fingerprint_device_t* fp_device;
-    std::string vendor_modules[] = {"fpc", "fpc_fod", "goodix", "goodix_fod"};
+    fingerprint_device_t *fp_device;
 
-    for (const auto& vendor : vendor_modules) {
-        if ((fp_device = getDeviceForVendor(vendor.c_str())) == nullptr) {
-            ALOGE("Failed to load %s fingerprint module", vendor.c_str());
-            continue;
-        }
+    fp_device = getDeviceForVendor("fpc");
+    if (fp_device == nullptr) {
+        ALOGE("Failed to load fpc fingerprint module");
+    } else {
+        return fp_device;
+    }
+
+    fp_device = getDeviceForVendor("goodix");
+    if (fp_device == nullptr) {
+        ALOGE("Failed to load goodix fingerprint module");
+    } else {
         return fp_device;
     }
 
@@ -442,66 +376,8 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
     }
 }
 
-/**
- * Returns whether the fingerprint sensor is an under-display fingerprint
- * sensor.
- * @param sensorId the unique sensor ID for which the operation should be
- * performed.
- * @return isUdfps indicating whether the specified sensor is an
- * under-display fingerprint sensor.
- */
-Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
-#ifdef ENABLE_UDFPS
-    return true;
-#else
-    return false;
-#endif
-}
-
-/**
- * Notifies about a touch occurring within the under-display fingerprint
- * sensor area.
- *
- * It it assumed that the device can only have one active under-display
- * fingerprint sensor at a time.
- *
- * If multiple fingers are detected within the sensor area, only the
- * chronologically first event will be reported.
- *
- * @param x The screen x-coordinate of the center of the touch contact area, in
- * display pixels.
- * @param y The screen y-coordinate of the center of the touch contact area, in
- * display pixels.
- * @param minor The length of the minor axis of an ellipse that describes the
- * touch area, in display pixels.
- * @param major The length of the major axis of an ellipse that describes the
- * touch area, in display pixels.
- */
-Return<void> BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y */,
-                                                 float /* minor */, float /* major */) {
-#ifdef ENABLE_UDFPS
-    int arg[2] = {Touch_Fod_Enable, FOD_STATUS_ON};
-    ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
-#endif
-
-    return Void();
-}
-/**
- * Notifies about a finger leaving the under-display fingerprint sensor area.
- *
- * It it assumed that the device can only have one active under-display
- * fingerprint sensor at a time.
- *
- * If multiple fingers have left the sensor area, only the finger which
- * previously caused a "finger down" event will be reported.
- */
-Return<void> BiometricsFingerprint::onFingerUp() {
-
-    return Void();
-}
-
 }  // namespace implementation
-}  // namespace V2_3
+}  // namespace V2_1
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware
