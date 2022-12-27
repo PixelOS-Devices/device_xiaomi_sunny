@@ -1,7 +1,5 @@
 /*
-   Copyright (c) 2015, The Linux Foundation. All rights reserved.
-   Copyright (C) 2016 The CyanogenMod Project.
-   Copyright (C) 2019-2020 The LineageOS Project.
+   Copyright (C) 2020 The LineageOS Project.
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -27,10 +25,6 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cstdlib>
-#include <fstream>
-#include <string.h>
-#include <unistd.h>
 #include <vector>
 
 #include <android-base/properties.h>
@@ -38,25 +32,22 @@
 #include <sys/_system_properties.h>
 #include <sys/sysinfo.h>
 
-#include "property_service.h"
-#include "vendor_init.h"
-
 using android::base::GetProperty;
-using std::string;
 
 std::vector<std::string> ro_props_default_source_order = {
     "",
     "odm.",
-    "product.",
     "system.",
     "system_ext.",
     "vendor.",
+    "vendor_dlkm.",
 };
 
-void property_override(char const prop[], char const value[], bool add = true) {
+void property_override(char const prop[], char const value[], bool add = true)
+{
     prop_info *pi;
 
-    pi = (prop_info *)__system_property_find(prop);
+    pi = (prop_info *) __system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
     else if (add)
@@ -86,43 +77,52 @@ void load_dalvik_properties() {
     }
 }
 
-void set_device_props(const std::string brand, const std::string device, const std::string model,
-        const std::string name, const std::string marketname) {
-    const auto set_ro_product_prop = [](const std::string &source,
-                                        const std::string &prop,
-                                        const std::string &value) {
-        auto prop_name = "ro.product." + source + prop;
-        property_override(prop_name.c_str(), value.c_str(), true);
-    };
-
+void set_ro_build_prop(const std::string &prop, const std::string &value) {
     for (const auto &source : ro_props_default_source_order) {
-        set_ro_product_prop(source, "brand", brand);
-        set_ro_product_prop(source, "device", device);
-        set_ro_product_prop(source, "model", model);
-        set_ro_product_prop(source, "name", name);
-        set_ro_product_prop(source, "marketname", marketname);
+        auto prop_name = "ro." + source + "build." + prop;
+        if (source == "")
+            property_override(prop_name.c_str(), value.c_str());
+        else
+            property_override(prop_name.c_str(), value.c_str(), false);
     }
-}
+};
+
+void set_ro_product_prop(const std::string &prop, const std::string &value) {
+    for (const auto &source : ro_props_default_source_order) {
+        auto prop_name = "ro.product." + source + prop;
+        property_override(prop_name.c_str(), value.c_str(), false);
+    }
+};
 
 void vendor_load_properties() {
-    string variant = android::base::GetProperty("ro.boot.product.hardware.sku", "");
 
-    if (variant == "mojito") {
-        set_device_props(
-            "Redmi", "mojito", "M2101K7AG", "mojito_global", "Redmi Note 10");
-        property_override("ro.product.mod_device", "mojito_global");
+    std::string sku;
+    sku = GetProperty("ro.boot.product.hardware.sku","sunny");
+
+    std::string model;
+    std::string device;
+    std::string fingerprint;
+    std::string description;
+    std::string mod_device;
+
+    if (sku == "mojito") {
+        model = "M2101K7AG";
+        device = "mojito";
+        fingerprint = "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys";
+        description = "mojito-user 12 RKQ1.210614.002 V13.0.10.0.SKGMIXM release-keys";
+        mod_device = "mojito_global";
     } else {
-        set_device_props(
-            "Redmi", "sunny", "M2101K7AG", "sunny_global", "Redmi Note 10");
-        property_override("ro.product.mod_device", "sunny_global");
+        model = "M2101K7AG";
+        device = "sunny";
+        fingerprint = "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys";
+        description = "sunny_global-user 12 RKQ1.210614.002 V13.0.10.0.SKGMIXM release-keys";
+        mod_device = "sunny_global";
     }
 
+    set_ro_build_prop("fingerprint", fingerprint);
+    set_ro_product_prop("device", device);
+    set_ro_product_prop("model", model);
+    property_override("ro.build.description", description.c_str());
+    property_override("ro.product.mod_device", mod_device.c_str());
     load_dalvik_properties();
-#ifdef __ANDROID_RECOVERY__
-    std::string buildtype = GetProperty("ro.build.type", "userdebug");
-    if (buildtype != "user") {
-        property_override("ro.debuggable", "1");
-        property_override("ro.adb.secure.recovery", "0");
-    }
-#endif
 }
