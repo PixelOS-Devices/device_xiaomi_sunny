@@ -99,7 +99,6 @@ on post-fs-data
 
     # Create fingerprint related directory
     mkdir /data/vendor/fpc 0770 system system
-    mkdir /data/vendor/goodix 0770 system system
 
 on boot
     start rmt_storage
@@ -141,9 +140,6 @@ on boot
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/modalias
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/compatible_all
-
-    # Create fingerprint related directory
-    mkdir /mnt/vendor/persist/goodix 0770 system system
 
 on property:sys.boot_completed=1
     # Set allocstall_threshold to 0
