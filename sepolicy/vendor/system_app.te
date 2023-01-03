@@ -6,5 +6,3 @@ allow system_app vendor_sysfs_battery_supply:file { getattr };
 r_dir_file(system_app, vendor_sysfs_battery_supply)
 
 get_prop(system_app, vendor_persist_camera_prop)
-
-allow system_app sysfs_kprofiles:file rw_file_perms;
