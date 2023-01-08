@@ -1,7 +1,7 @@
 [
   {
-    "repository"  : "vendor_xiaomi_mojito",
-    "target_path" : "vendor/xiaomi/mojito",
+    "repository"  : "vendor_xiaomi_sunny",
+    "target_path" : "vendor/xiaomi/sunny",
     "branch": "thirteen"
   },
   {
@@ -11,8 +11,8 @@
   },
   {
     "remote": "github",
-    "repository"  : "PixelOS-Devices/kernel_xiaomi_mojito",
-    "target_path" : "kernel/xiaomi/mojito",
+    "repository"  : "PixelOS-Devices/kernel_xiaomi_sunny",
+    "target_path" : "kernel/xiaomi/sunny",
     "branch": "thirteen"
   },
   {

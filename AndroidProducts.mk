@@ -5,5 +5,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_mojito.mk
+    $(LOCAL_DIR)/yaap_sunny.mk
 	

@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "SystemUIMojito",
-    theme: "SystemUIMojito",
+    name: "FrameworksSunny",
+    theme: "FrameworksSunny",
     sdk_version: "current",
     vendor: true,
 }

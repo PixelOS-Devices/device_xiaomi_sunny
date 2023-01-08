@@ -96,21 +96,12 @@ void vendor_load_properties() {
     std::string mod_device;
     std::string marketname;
 
-    if (sku == "mojito") {
-        model = "M2101K7AG";
-        device = "mojito";
-        fingerprint = "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys";
-        description = "mojito-user 12 RKQ1.210614.002 V13.0.10.0.SKGMIXM release-keys";
-        mod_device = "mojito_global";
-        marketname = "Redmi Note 10";
-    } else {
-        model = "M2101K7AG";
-        device = "sunny";
-        fingerprint = "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys";
-        description = "sunny_global-user 12 RKQ1.210614.002 V13.0.10.0.SKGMIXM release-keys";
-        mod_device = "sunny_global";
-        marketname = "Redmi Note 10";
-    }
+    model = "M2101K7AG";
+    device = "sunny";
+    fingerprint = "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys";
+    description = "sunny_global-user 12 RKQ1.210614.002 V13.0.10.0.SKGMIXM release-keys";
+    mod_device = "sunny_global";
+    marketname = "Redmi Note 10";
 
     set_ro_build_prop("fingerprint", fingerprint);
     set_ro_product_prop("device", device);

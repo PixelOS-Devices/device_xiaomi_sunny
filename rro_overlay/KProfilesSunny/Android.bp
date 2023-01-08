@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "KProfilesMojito",
+    name: "KProfilesSunny",
     system_ext_specific: true,
     sdk_version: "current"
 }

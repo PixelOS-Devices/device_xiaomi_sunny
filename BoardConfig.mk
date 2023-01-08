@@ -9,10 +9,10 @@ BUILD_BROKEN_PREBUILT_ELF_FILES := true
 
 BOARD_VENDOR := xiaomi
 
-DEVICE_PATH := device/xiaomi/mojito
+DEVICE_PATH := device/xiaomi/sunny
 
 # Inherit from proprietary files
-include vendor/xiaomi/mojito/BoardConfigVendor.mk
+include vendor/xiaomi/sunny/BoardConfigVendor.mk
 
 # A/B
 AB_OTA_UPDATER := true
@@ -102,8 +102,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/manifest/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mojito
-TARGET_RECOVERY_DEVICE_MODULES := libinit_mojito
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_sunny
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sunny
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 4
@@ -130,7 +130,7 @@ KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
 TARGET_KERNEL_LLVM_BINUTILS := true
 TARGET_KERNEL_USE_IAS := false
 TARGET_KERNEL_CONFIG := neternels_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mojito
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sunny
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Media

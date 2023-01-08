@@ -4,10 +4,10 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.settingsprovider.overlay.xiaomi_mojito">
+    package="com.android.systemui.overlay.xiaomi_sunny">
 
     <overlay
         android:isStatic="true"
         android:priority="550"
-        android:targetPackage="com.android.providers.settings" />
+        android:targetPackage="com.android.systemui" />
 </manifest>
