@@ -54,7 +54,7 @@ void property_override(char const prop[], char const value[], bool add = true)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void load_dalvik_properties() {
+void load_dalvik_properties(void) {
     struct sysinfo sys;
 
     sysinfo(&sys);
@@ -84,31 +84,20 @@ void set_ro_product_prop(const std::string &prop, const std::string &value) {
     }
 };
 
-void vendor_load_properties() {
+void vendor_load_properties(void) {
 
-    std::string sku;
-    sku = GetProperty("ro.boot.product.hardware.sku","sunny");
+    std::string region = GetProperty("ro.boot.hwc", "");
+    std::string model = "M2101K7AG";
 
-    std::string model;
-    std::string device;
-    std::string fingerprint;
-    std::string description;
-    std::string mod_device;
-    std::string marketname;
+    if (region.find("INDIA") != std::string::npos)
+        model = "M2101K7AI";
 
-    model = "M2101K7AG";
-    device = "sunny";
-    fingerprint = "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.10.0.SKGMIXM:user/release-keys";
-    description = "sunny_global-user 12 RKQ1.210614.002 V13.0.10.0.SKGMIXM release-keys";
-    mod_device = "sunny_global";
-    marketname = "Redmi Note 10";
-
-    set_ro_build_prop("fingerprint", fingerprint);
-    set_ro_product_prop("device", device);
+    set_ro_build_prop("fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.11.0.SKGMIXM:user/release-keys");
+    set_ro_product_prop("device", "sunny");
     set_ro_product_prop("model", model);
-    property_override("ro.build.description", description.c_str());
-    property_override("ro.product.mod_device", mod_device.c_str());
-    property_override("bluetooth.device.default_name", marketname.c_str());
-    property_override("vendor.usb.product_string", marketname.c_str());
+    property_override("ro.build.description", "sunny_global-user 12 RKQ1.210614.002 V13.0.11.0.SKGMIXM release-keys");
+    property_override("ro.product.mod_device", "sunny_global");
+    property_override("bluetooth.device.default_name", "Redmi Note 10");
+    property_override("vendor.usb.product_string", "Redmi Note 10");
     load_dalvik_properties();
 }
