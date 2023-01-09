@@ -97,6 +97,7 @@ void vendor_load_properties(void) {
         set_ro_build_prop("fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V13.0.11.0.SKGMIXM:user/release-keys");
         set_ro_product_prop("device", "sunny");
         set_ro_product_prop("model", model);
+        property_override("ro.product.device", "mojito");
         property_override("ro.build.description", "sunny_global-user 12 RKQ1.210614.002 V13.0.11.0.SKGMIXM release-keys");
         property_override("ro.product.mod_device", "sunny_global");
         property_override("bluetooth.device.default_name", "Redmi Note 10");
