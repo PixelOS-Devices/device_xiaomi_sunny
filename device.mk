@@ -7,6 +7,9 @@
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/sunny/sunny-vendor.mk)
 
