@@ -126,6 +126,9 @@ on boot
     chown system system /sys/class/sensors/apds9930-proximity/enable
     chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
+    mkdir /mnt/vendor/persist/alarm 0777 system system
+    chmod 0666 /mnt/vendor/persist/alarm/data
+
     # Create directory used for display
     mkdir /mnt/vendor/persist/display 0770 system graphics
 
