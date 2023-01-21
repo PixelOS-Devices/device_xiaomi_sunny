@@ -59,4 +59,10 @@
     <dimen name="config_rounded_mask_size_top">156px</dimen>
     <dimen name="config_rounded_mask_size_bottom">156px</dimen>
 
+    <!-- Starting padding for a left-aligned status bar clock -->
+    <dimen name="status_bar_left_clock_starting_padding">10dp</dimen>
+
+    <!-- the padding on the end of the statusbar -->
+    <dimen name="status_bar_padding_end">10dp</dimen>
+
 </resources>
