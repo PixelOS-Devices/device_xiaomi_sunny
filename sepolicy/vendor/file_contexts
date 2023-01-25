@@ -9,9 +9,6 @@
 /mnt/vendor/persist/camera(/.*)?                                        u:object_r:camera_persist_file:s0
 /vendor/bin/remosaic_daemon                                             u:object_r:remosaic_daemon_exec:s0
 
-# DT2W
-/sys/touchpanel/double_tap                      u:object_r:sysfs_touchpanel:s0
-
 # Charger
 /vendor/bin/batterysecret                                               u:object_r:batterysecret_exec:s0
 
