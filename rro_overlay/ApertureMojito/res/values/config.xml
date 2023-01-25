@@ -9,9 +9,6 @@
 
     <!-- List of ID of auxiliary cameras that must be ignored by the app. -->
     <string-array name="config_ignoredAuxCameraIds">
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
+        <item>7</item> <!-- no-op front camera -->
     </string-array>
 </resources>
