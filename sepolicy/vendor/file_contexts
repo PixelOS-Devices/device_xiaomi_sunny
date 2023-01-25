@@ -14,9 +14,6 @@
 /dev/ti-drv8846                                                         u:object_r:motor_device:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service              u:object_r:hal_motor_default_exec:s0
 
-# DT2W
-/sys/touchpanel/double_tap                      u:object_r:sysfs_touchpanel:s0
-
 # Charger
 /vendor/bin/batterysecret                                               u:object_r:batterysecret_exec:s0
 

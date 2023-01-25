@@ -116,10 +116,6 @@ on boot
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chmod 0664 /sys/class/touch/touch_dev/palm_sensor
 
-    # Set kernel touchpanel permissions
-    chmod 0660 /sys/touchpanel/double_tap
-    chown system system /sys/touchpanel/double_tap
-
     # USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
