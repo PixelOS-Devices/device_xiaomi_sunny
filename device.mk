@@ -433,11 +433,17 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor
 
 # Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
 PRODUCT_PACKAGES += \
     libsensorndkbridge
 
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi_sunny-multihal
+
+PRODUCT_PACKAGES += \
+    sensors.xiaomi
 
 # Sensors configs
 PRODUCT_COPY_FILES += \
