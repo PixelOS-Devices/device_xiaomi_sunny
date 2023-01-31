@@ -71,4 +71,7 @@
     <!-- the padding on the end of the statusbar -->
     <dimen name="status_bar_padding_end">10dp</dimen>
 
+    <!-- Horizontal offset divisor of statusbar for burn-in protection -->
+    <integer name="status_bar_offset_divisor">4</integer>
+
 </resources>
