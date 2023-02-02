@@ -388,7 +388,9 @@ PRODUCT_PACKAGES += \
     SettingsMojito \
     SystemUIMojito \
     TelephonyMojito \
-    WifiMojito
+    WifiMojito \
+    SettingsOverlayM2101K7AG \
+    SettingsOverlayM2101K7AI
 
 # Perf
 PRODUCT_PACKAGES += \

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.settings.overlay.m2101k7ai">
+    <application android:hasCode="false" />
+    <overlay android:targetPackage="com.android.settings"
+             android:requiredSystemPropertyName="ro.boot.hwc"
+             android:requiredSystemPropertyValue="INDIA_K7A"
+             android:isStatic="true" />
+</manifest>
