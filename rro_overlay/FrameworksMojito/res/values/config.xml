@@ -659,4 +659,7 @@
         <item>org.lineageos.aperture</item>
         <item>org.lineageos.aperture.dev</item>
     </string-array>
+
+     <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.11.0.SKGMIXM:user/release-keys</string>
 </resources>
