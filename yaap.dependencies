@@ -1,8 +1,17 @@
 [
   {
+    "repository"  : "device_qcom_common",
+    "target_path" : "device/qcom/common"
+  },
+  {
     "repository"  : "vendor_xiaomi_sunny",
     "target_path" : "vendor/xiaomi/sunny",
     "branch": "thirteen"
+  },
+  {
+    "repository"  : "yaosp/vendor_qcom_common",
+    "target_path" : "vendor/qcom/common",
+    "remote"      : "gitlab"
   },
   {
     "repository"  : "hardware_xiaomi",
