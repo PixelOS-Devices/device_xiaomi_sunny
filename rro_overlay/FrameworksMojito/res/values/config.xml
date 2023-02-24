@@ -661,6 +661,10 @@
         <item>org.lineageos.aperture.dev</item>
     </string-array>
 
-     <!-- Fingerprint from stock ROM -->
+    <!-- Fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.11.0.SKGMIXM:user/release-keys</string>
+
+    <!-- Boost Framework -->
+    <bool name="config_supportsBoostFramework">true</bool>
+
 </resources>

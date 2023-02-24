@@ -19,6 +19,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+# Inherit Perf aspects
+$(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
+$(call inherit-product, device/qcom/common/vendor/perf-legacy/qti-perf-legacy.mk)
+
 # A/B
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
