@@ -1,1 +1,2 @@
 allow system_app sysfs_kprofiles:file rw_file_perms;
+allow system_app sysfs_displayfeatures:file rw_file_perms;
