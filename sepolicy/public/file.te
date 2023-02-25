@@ -1,1 +1,2 @@
 type sysfs_kprofiles, sysfs_type, fs_type;
+type sysfs_displayfeatures, sysfs_type, fs_type;
