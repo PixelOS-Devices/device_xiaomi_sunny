@@ -18,8 +18,8 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.kprofiles.overlay.mode"
+    package="com.android.kprofiles.overlay.xiaomi_sunny"
     android:versionCode="1"
     android:versionName="1.0">
-    <overlay android:targetPackage="com.android.kprofiles" android:priority="0" android:isStatic="true" />
+    <overlay android:targetPackage="com.android.kprofiles" android:priority="880" android:isStatic="true" />
 </manifest>
