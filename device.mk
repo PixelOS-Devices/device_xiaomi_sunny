@@ -17,6 +17,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
 $(call inherit-product, device/qcom/common/vendor/perf-legacy/qti-perf-legacy.mk)
 
+# Inherit Adreno aspects
+$(call inherit-product, device/qcom/common/vendor/adreno-6xx-legacy/qti-adreno-6xx-legacy.mk)
+
 # A/B
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
