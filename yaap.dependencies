@@ -35,5 +35,11 @@
     "repository": "StatiXOS/android_prebuilts_gcc_linux-x86_arm_arm-eabi",
     "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi",
     "branch": "12.0.0"
+  },
+  {
+    "remote": "github",
+    "repository": "cyberknight777/android_packages_apps_DisplayFeatures",
+    "target_path": "packages/apps/DisplayFeatures",
+    "branch": "master"
   }
 ]
