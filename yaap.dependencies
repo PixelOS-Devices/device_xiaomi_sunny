@@ -19,8 +19,7 @@
     "branch": "thirteen"
   },
   {
-    "remote": "github",
-    "repository"  : "PixelOS-Devices/kernel_xiaomi_sunny",
+    "repository"  : "kernel_xiaomi_sunny",
     "target_path" : "kernel/xiaomi/sunny",
     "branch": "thirteen"
   },
