@@ -99,15 +99,15 @@ void vendor_load_properties() {
     if (sku == "mojito") {
         model = "M2101K7AG";
         device = "mojito";
-        fingerprint = "Redmi/mojito/mojito:12/RKQ1.210614.002/V13.0.11.0.SKGMIXM:user/release-keys";
-        description = "mojito-user 12 RKQ1.210614.002 V14.0.1.0.SKGMIXM release-keys";
+        fingerprint = "Redmi/mojito/mojito:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys";
+        description = "mojito-user 12 RKQ1.210614.002 V14.0.2.0.SKGMIXM release-keys";
         mod_device = "mojito_global";
         marketname = "Redmi Note 10";
     } else {
         model = "M2101K7AG";
         device = "sunny";
-        fingerprint = "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.1.0.SKGMIXM:user/release-keys";
-        description = "sunny-user 12 RKQ1.210614.002 V14.0.1.0.SKGMIXM release-keys";
+        fingerprint = "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys";
+        description = "sunny-user 12 RKQ1.210614.002 V14.0.2.0.SKGMIXM release-keys";
         mod_device = "sunny_global";
         marketname = "Redmi Note 10";
     }
