@@ -381,7 +381,6 @@ PRODUCT_PACKAGES += \
     ApertureSunny \
     CarrierConfigSunny \
     DisplayFeaturesSunny \
-    KProfilesSunny \
     FrameworksSunny \
     OpenDeltaSunny \
     SettingsProviderSunny \
