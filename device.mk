@@ -383,7 +383,6 @@ PRODUCT_PACKAGES += \
     ApertureMojito \
     CarrierConfigMojito \
     DisplayFeaturesMojito \
-    KProfilesMojito \
     FrameworksMojito \
     SettingsProviderMojito \
     SettingsMojito \
