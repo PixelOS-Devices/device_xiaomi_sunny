@@ -16,12 +16,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                     
 # Double Tap Sensor
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-1/1-0038/double_tap_pressed u:object_r:sysfs_touchpanel:s0
 
-# Extcon sysfs
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon  u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,usb-pdphy@1700/extcon   u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/extcon        u:object_r:sysfs_extcon:s0
-
 # Fingerprint
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/device_prepare         u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/fingerdown_wait        u:object_r:vendor_sysfs_fingerprint:s0
