@@ -148,6 +148,10 @@ on boot
     chown system system /sys/devices/platform/soc/884000.i2c/i2c-1/1-0038/double_tap_pressed
     chmod 0660 /sys/devices/platform/soc/884000.i2c/i2c-1/1-0038/double_tap_pressed
 
+    # Single Tap Sensor
+    chown system system /sys/devices/platform/soc/884000.i2c/i2c-1/1-0038/single_tap_pressed
+    chmod 0660 /sys/devices/platform/soc/884000.i2c/i2c-1/1-0038/single_tap_pressed
+
     # Enable qcrild and data services
     enable vendor.qcrild
     enable vendor.qcrild2
