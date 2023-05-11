@@ -59,4 +59,9 @@
     <dimen name="config_rounded_mask_size_top">156px</dimen>
     <dimen name="config_rounded_mask_size_bottom">156px</dimen>
 
+    <!-- Maximum vertical offset of statusbar for burn-in protection -->
+    <dimen name="status_bar_offset_max_y">0.75dp</dimen>
+
+    <!-- Maximum horizontal offset of statusbar for burn-in protection -->
+    <dimen name="status_bar_offset_max_x">0.75dp</dimen>
 </resources>
