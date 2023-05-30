@@ -15,3 +15,6 @@ ro.com.google.ime.kb_pad_land_r=64
 persist.vendor.qti.telephony.vt_cam_interface=2
 persist.vendor.radio.report_codec=1
 persist.vendor.radio.vdp_on_ims_cap=1
+
+# Phantom process monitoring
+sys.fflag.override.settings_enable_monitor_phantom_procs=false
