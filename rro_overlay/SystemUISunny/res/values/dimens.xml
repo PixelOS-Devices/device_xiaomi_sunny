@@ -51,6 +51,9 @@
     <!-- gap on either side of status bar notification icons -->
     <dimen name="status_bar_icon_padding">-1dp</dimen>
 
+    <!-- End padding for left-aligned status bar clock -->
+    <dimen name="status_bar_left_clock_end_padding">3dp</dimen>
+
     <!-- Rounded mask size -->
     <dimen name="config_rounded_mask_size">156px</dimen>
     <dimen name="config_rounded_mask_size_top">156px</dimen>
