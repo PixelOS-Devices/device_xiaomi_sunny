@@ -679,4 +679,7 @@
     <!-- Boost Framework -->
     <bool name="config_supportsBoostFramework">true</bool>
 
+    <!-- Absolute path of the DC dimming node -->
+    <string name="config_dcdNodePath">/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,lcdb@ec00/regulator/regulator.63/soc:qcom,dsi-display-lab/anti_flicker</string>
+
 </resources>
