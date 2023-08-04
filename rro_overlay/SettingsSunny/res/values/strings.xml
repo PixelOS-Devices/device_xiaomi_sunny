@@ -13,5 +13,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="kernel_name" translatable="false">cyberknight777</string>
-    <string name="kernel_telegram" translatable="false">https://github.com/cyberknight777</string>
+    <string name="kernel_telegram" translatable="false">https://t.me/cyberknight777</string>
+    <string name="maintainer_name" translatable="false">cyberknight777</string>
+    <string name="maintainer_telegram" translatable="false">https://t.me/cyberknight777</string>
 </resources>
