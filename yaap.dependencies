@@ -36,9 +36,7 @@
     "branch": "12.0.0"
   },
   {
-    "remote": "github",
-    "repository": "cyberknight777/android_packages_apps_DisplayFeatures",
-    "target_path": "packages/apps/DisplayFeatures",
-    "branch": "master"
+    "repository": "packages_apps_DisplayFeatures",
+    "target_path": "packages/apps/DisplayFeatures"
   }
 ]
