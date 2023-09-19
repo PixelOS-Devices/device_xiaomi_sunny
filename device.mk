@@ -475,6 +475,11 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi \
     hardware/qcom-caf/wlan
 
+# Task Profiles
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/profiles/task_profiles_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
+    $(LOCAL_PATH)/configs/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
