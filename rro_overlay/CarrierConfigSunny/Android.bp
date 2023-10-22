@@ -2,5 +2,5 @@ runtime_resource_overlay {
     name: "CarrierConfigSunny",
     theme: "CarrierConfigSunny",
     sdk_version: "current",
-    vendor: true,
+    product_specific: true,
 }

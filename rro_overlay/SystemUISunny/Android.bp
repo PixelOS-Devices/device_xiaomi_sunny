@@ -2,5 +2,5 @@ runtime_resource_overlay {
     name: "SystemUISunny",
     theme: "SystemUISunny",
     sdk_version: "current",
-    vendor: true,
+    product_specific: true,
 }
