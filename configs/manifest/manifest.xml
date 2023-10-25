@@ -25,16 +25,6 @@
         <fqname>@1.0::IGatekeeper/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.gnss</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IGnss/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.health</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::IHealth/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.ir</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IConsumerIr/default</fqname>
@@ -122,21 +112,6 @@
         <name>vendor.qti.esepowermanager</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IEsePowerManager/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.gnss</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::ILocHidlGnss/gnss_vendor</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.gnss</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.1::ILocHidlGnss/gnss_vendor</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.gnss</name>
-        <transport>hwbinder</transport>
-        <fqname>@3.0::ILocHidlGnss/gnss_vendor</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
