@@ -6,7 +6,7 @@
   {
     "repository"  : "vendor_xiaomi_sunny",
     "target_path" : "vendor/xiaomi/sunny",
-    "branch": "thirteen"
+    "branch": "fourteen"
   },
   {
     "repository"  : "yaosp/vendor_qcom_common",
@@ -16,12 +16,12 @@
   {
     "repository"  : "hardware_xiaomi",
     "target_path" : "hardware/xiaomi",
-    "branch": "thirteen"
+    "branch": "fourteen"
   },
   {
     "repository"  : "kernel_xiaomi_sunny",
     "target_path" : "kernel/xiaomi/sunny",
-    "branch": "thirteen"
+    "branch": "fourteen"
   },
   {
     "remote": "github",
