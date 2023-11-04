@@ -41,7 +41,7 @@ prebuilt_etc {
     name: "fstab.default",
     src: "etc/fstab.default",
     vendor: true,
-    ramdisk_available: true,
+    vendor_ramdisk_available: true,
 }
 
 prebuilt_etc {

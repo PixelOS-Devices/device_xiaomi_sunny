@@ -425,7 +425,7 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sh \
     fstab.default \
-    fstab.default.ramdisk \
+    fstab.default.vendor_ramdisk \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
