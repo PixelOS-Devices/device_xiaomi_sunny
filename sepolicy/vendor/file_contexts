@@ -70,7 +70,7 @@
 /sys/devices/platform/us_prox.0/iio:device2(/.*)?                                                                               u:object_r:vendor_sysfs_iio:s0
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1(/.*)?        u:object_r:vendor_sysfs_iio:s0
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm6150l@4:vadc@3100/iio:device1(/.*)?        u:object_r:vendor_sysfs_iio:s0
-/vendor/bin/hw/android\.hardware\.sensors@2.1-service\.xiaomi_sunny-multihal                                                   u:object_r:hal_sensors_default_exec:s0
+/vendor/bin/hw/android\.hardware\.sensors@2.1-service\.sunny-multihal                                                   u:object_r:hal_sensors_default_exec:s0
 
 # SSR
 /sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:vendor_sysfs_ssr:s0

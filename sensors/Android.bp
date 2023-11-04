@@ -14,7 +14,7 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.sensors@2.1-service.xiaomi_sunny-multihal",
+    name: "android.hardware.sensors@2.1-service.sunny-multihal",
     defaults: [
         "hidl_defaults",
     ],
@@ -25,8 +25,8 @@ cc_binary {
         "HalProxy.cpp",
         "HalProxyCallback.cpp",
     ],
-    init_rc: ["android.hardware.sensors@2.1-service-multihal.xiaomi_sunny.rc"],
-    vintf_fragments: ["android.hardware.sensors@2.1-multihal.xiaomi_sunny.xml"],
+    init_rc: ["android.hardware.sensors@2.1-service-multihal.sunny.rc"],
+    vintf_fragments: ["android.hardware.sensors@2.1-multihal.sunny.xml"],
     header_libs: [
         "android.hardware.sensors@2.X-shared-utils",
     ],

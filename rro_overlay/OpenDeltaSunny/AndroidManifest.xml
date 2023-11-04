@@ -18,7 +18,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.chainfire.opendelta.overlay.xiaomi_sunny"
+    package="eu.chainfire.opendelta.overlay.sunny"
     android:versionCode="1"
     android:versionName="1.0">
     <overlay android:targetPackage="eu.chainfire.opendelta" android:priority="0" android:isStatic="true" />

@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.xiaomi_sunny"
+    package="com.android.wifi.resources.sunny"
     android:versionCode="1"
     android:versionName="1.0">
     <application android:hasCode="false" />

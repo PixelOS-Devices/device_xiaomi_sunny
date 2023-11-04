@@ -18,7 +18,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.aperture.overlay.xiaomi_sunny"
+    package="org.lineageos.aperture.overlay.sunny"
     android:versionCode="1"
     android:versionName="1.0">
     <overlay android:targetPackage="org.lineageos.aperture" android:priority="800" android:isStatic="true" />
