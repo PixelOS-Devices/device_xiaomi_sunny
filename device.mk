@@ -13,13 +13,6 @@ $(call inherit-product, vendor/xiaomi/sunny/sunny-vendor.mk)
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Inherit Perf aspects
-$(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
-$(call inherit-product, device/qcom/common/vendor/perf-legacy/qti-perf-legacy.mk)
-
-# Inherit Adreno aspects
-$(call inherit-product, device/qcom/common/vendor/adreno-6xx-legacy/qti-adreno-6xx-legacy.mk)
-
 # A/B
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -399,6 +392,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
     $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
+# Platform
+MSMSTEPPE := sm6150
+TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
+
+TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
+    perf
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -519,10 +520,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
-
-# Vendor service manager
-PRODUCT_PACKAGES += \
-    vndservicemanager
 
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
