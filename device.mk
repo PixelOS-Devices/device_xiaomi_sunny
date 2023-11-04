@@ -524,9 +524,6 @@ PRODUCT_COPY_FILES += \
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 29 30
-
 # Vulkan
 PRODUCT_PACKAGES += \
     libvulkan
