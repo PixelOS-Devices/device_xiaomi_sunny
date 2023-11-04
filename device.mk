@@ -424,7 +424,7 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
-    fstab.qcom \
+    fstab.default \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \

@@ -72,7 +72,7 @@ on init
     chmod 0660 /dev/akm09970
 
 on fs
-    mount_all --early /vendor/etc/fstab.qcom
+    mount_all --early /vendor/etc/fstab.default
 
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
@@ -84,7 +84,7 @@ on fs
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
-    mount_all --late /vendor/etc/fstab.qcom
+    mount_all --late /vendor/etc/fstab.default
 
 service mi_thermald /system/vendor/bin/mi_thermald
     class core
