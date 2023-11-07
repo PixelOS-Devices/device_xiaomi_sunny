@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Whether device supports A/B performance flashing -->
-	<item name="support_ab_perf_mode" type="bool">true</item>
-</resources>

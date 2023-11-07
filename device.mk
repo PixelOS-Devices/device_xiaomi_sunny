@@ -372,7 +372,6 @@ PRODUCT_PACKAGES += \
     DisableQTIAppsSunny \
     DisplayFeaturesSunny \
     FrameworksSunny \
-    OpenDeltaSunny \
     SettingsProviderSunny \
     SettingsSunny \
     SystemUISunny \

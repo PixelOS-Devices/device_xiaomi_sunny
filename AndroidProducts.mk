@@ -5,5 +5,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_sunny.mk
+    $(LOCAL_DIR)/aosp_sunny.mk
 	

@@ -27,13 +27,10 @@
     <bool name="config_dozePulsePickup">true</bool>
 
     <!-- Type of the double tap sensor. Empty if double tap is not supported. -->
-    <string name="config_dozeDoubleTapSensorType" translatable="false">org.yaap.sensor.double_tap</string>
+    <string name="config_dozeDoubleTapSensorType" translatable="false">org.lineageos.sensor.double_tap</string>
 
     <!-- Type of the tap sensor. Empty if tap is not supported. -->
-    <string name="config_dozeTapSensorType" translatable="false">org.yaap.sensor.single_tap</string>
-
-    <!-- Auto-brightness sensor type string -->
-    <string name="config_displayLightSensorType">"android.sensor.light"</string>
+    <string name="config_dozeTapSensorType" translatable="false">org.lineageos.sensor.single_tap</string>
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
@@ -668,7 +665,7 @@
     </string-array>
 
     <!-- The list of package IDs that are not allowed to use aux cameras. -->
-    <string-array name="config_cameraAuxPackageBlackList" translatable="false">
+    <string-array name="config_cameraAuxPackageExcludeList" translatable="false">
         <item>org.telegram.messenger</item>
         <item>org.thunderdog.challegram</item>
         <item>tw.nekomimi.nekogram</item>
@@ -676,8 +673,5 @@
         <item>org.telegram.messenger.web</item>
         <item>com.exteragram.messenger</item>
     </string-array>
-
-    <!-- Absolute path of the DC dimming node -->
-    <string name="config_dcdNodePath">/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,lcdb@ec00/regulator/regulator.63/soc:qcom,dsi-display-lab/anti_flicker</string>
 
 </resources>
