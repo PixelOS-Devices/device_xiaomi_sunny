@@ -385,12 +385,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
 # Platform
+TARGET_EXCLUDE_QCOM_SEPOLICY := true
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     perf
+
+$(call inherit-product, device/qcom/common/common.mk)
+include vendor/qcom/opensource/core-utils/build/utils.mk
 
 # Power
 PRODUCT_PACKAGES += \
