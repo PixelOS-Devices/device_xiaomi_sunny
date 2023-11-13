@@ -1,9 +1,6 @@
 # Bluetooth
 vendor.bluetooth.soc=cherokee
 
-# Charger
-ro.charger.enable_suspend=true
-
 # Display
 debug.force_no_blanking=true
 
