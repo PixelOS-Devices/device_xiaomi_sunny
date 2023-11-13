@@ -244,6 +244,23 @@
             <instance>MwqemAdapter</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.perf2</name>
+         <version>1</version>
+         <interface>
+            <name>IPerf</name>
+            <instance>default</instance>
+         </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.power.powermodule</name>
+        <version>1</version>
+        <interface>
+            <name>IPowerModule</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.qccvndhal</name>
         <version>1.0</version>
@@ -530,12 +547,28 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.memory.pasrmanager</name>
+        <version>1</version>
+        <interface>
+            <name>IPasrManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.memory.pasrmanager</name>
         <version>1.0-1</version>
         <interface>
             <name>IPasrManager</name>
             <instance>pasrhal</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.qspmhal</name>
+        <version>1</version>
+        <interface>
+            <name>IQspmhal</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
