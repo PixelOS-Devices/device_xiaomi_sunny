@@ -116,7 +116,6 @@ BOARD_KERNEL_CMDLINE += kpti=off
 BOARD_KERNEL_CMDLINE += init.is_inline=1
 BOARD_KERNEL_CMDLINE += init.is_dt2w_sensor=1
 BOARD_KERNEL_CMDLINE += init.is_st2w_sensor=1
-BOARD_KERNEL_CMDLINE += init.is_sbalance=1
 
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
