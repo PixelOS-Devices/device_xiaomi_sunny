@@ -323,6 +323,12 @@ service charger /system/bin/charger
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
+    class core
+    user root
+    group root
+    writepid /dev/cpuset/system-background/tasks
+
 on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
