@@ -149,42 +149,6 @@ $(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
-EGL_32_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libEGL_adreno.so
-$(EGL_32_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating 32-bit EGL symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf egl/$(notdir $@) $@
-
-GLESv2_32_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libGLESv2_adreno.so
-$(GLESv2_32_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating 32-bit GLESv2 symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf egl/$(notdir $@) $@
-
-Q3DTOOLS_32_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libq3dtools_adreno.so
-$(Q3DTOOLS_32_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating 32-bit Q3D Tools symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf egl/$(notdir $@) $@
-
-EGL_64_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libEGL_adreno.so
-$(EGL_64_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating 64-bit EGL symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf egl/$(notdir $@) $@
-
-GLESv2_64_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libGLESv2_adreno.so
-$(GLESv2_64_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating 64-bit GLESv2 symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf egl/$(notdir $@) $@
-
-Q3DTOOLS_64_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libq3dtools_adreno.so
-$(Q3DTOOLS_64_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating 64-bit Q3DTools symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf egl/$(notdir $@) $@
-
 WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld
 $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating wifi firmware symlinks: $@"
@@ -202,7 +166,6 @@ $(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT)
 ALL_DEFAULT_INSTALLED_MODULES += $(RFS_APQ_GNSS_SYMLINKS) $(RFS_MDM_ADSP_SYMLINKS) $(RFS_MDM_CDSP_SYMLINKS) $(RFS_MDM_MPSS_SYMLINKS) $(RFS_MDM_SLPI_SYMLINKS) $(RFS_MDM_TN_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_CDSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS)
-ALL_DEFAULT_INSTALLED_MODULES += $(EGL_32_SYMLINK) $(GLESv2_32_SYMLINK) $(Q3DTOOLS_32_SYMLINK) $(EGL_64_SYMLINK) $(GLESv2_64_SYMLINK) $(Q3DTOOLS_64_SYMLINK)
 ALL_DEFAULT_INSTALLED_MODULES += $(WIFI_FIRMWARE_SYMLINKS)
 ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINKS)
 
