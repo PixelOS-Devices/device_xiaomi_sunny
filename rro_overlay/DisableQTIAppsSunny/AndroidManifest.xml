@@ -11,7 +11,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.disableqtiapps">
+    package="org.lineageos.disableqtiapps.sunny">
     <overlay
         android:isStatic="true"
         android:priority="800"
